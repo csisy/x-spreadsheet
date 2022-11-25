@@ -5,7 +5,6 @@ import Sheet from './component/sheet';
 import Bottombar from './component/bottombar';
 import { cssPrefix } from './config';
 import { locale } from './locale/locale';
-import './index.less';
 
 
 class Spreadsheet {
@@ -39,6 +38,10 @@ class Spreadsheet {
     if (this.bottombar !== null) {
       rootEl.child(this.bottombar.el);
     }
+  }
+
+  resize() {
+    this.sheet.reload();
   }
 
   addSheet(name, active = true) {

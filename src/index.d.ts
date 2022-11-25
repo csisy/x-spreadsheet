@@ -1,4 +1,4 @@
-declare module 'x-data-spreadsheet' {
+declare module '@csisy/x-data-spreadsheet' {
   export interface ExtendToolbarOption {
     tip?: string;
     el?: HTMLElement;
@@ -193,6 +193,8 @@ declare module 'x-data-spreadsheet' {
      * @param callback
      */
     change(callback: (json: Record<string, any>) => void): this;
+
+    resize(): void;
     /**
      * set locale
      * @param lang
